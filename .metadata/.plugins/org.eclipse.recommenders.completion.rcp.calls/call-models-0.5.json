@@ -1,0 +1,17 @@
+{
+  "C:\\Program Files\\Java\\jre7\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "D:\\com-pro-2\\week02_cashreg\\src": {
+    "location": "D:\\com-pro-2\\week02_cashreg\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\com-pro-2\\week02_cashreg\\src\u0027. Skipped."
+  },
+  "D:\\com-pro-2\\week02_grading\\src": {
+    "location": "D:\\com-pro-2\\week02_grading\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027D:\\com-pro-2\\week02_grading\\src\u0027. Skipped."
+  }
+}

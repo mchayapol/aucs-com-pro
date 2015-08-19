@@ -1,0 +1,7 @@
+package edu.au.scitech.sc2101;
+
+public class CashReg {
+	void change(int purchase, int cash) {
+		
+	}
+}
