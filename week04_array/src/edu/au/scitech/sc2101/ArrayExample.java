@@ -17,13 +17,27 @@ public class ArrayExample {
 		return sum;		
 	}
 
+	public int max(int[] arr) {
+		int max = arr[0];
+		for(int x: arr) {
+			max = (x > max) ? x : max;
+		}
+		return max;
+	}
+
 	public int min(int[] arr) {
 		int min = arr[0];
 		for(int x: arr) {
-			if (x < min) {
+			/*if (x < min) {
 				min = x;
-			}
+			}*/
+			min = (x < min) ? x : min;
 		}
 		return min;
 	}
+
+	public double avg(int[] arr) {
+		return sum(arr) / arr.length;
+	}
+
 }

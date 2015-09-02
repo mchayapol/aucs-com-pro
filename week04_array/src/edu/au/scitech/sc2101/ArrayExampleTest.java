@@ -12,8 +12,8 @@ public class ArrayExampleTest {
 	
 	@Test
 	public void testAverage() {
-		assertEquals(43, ae.avg(data1) );		
-		assertEquals(3, ae.avg(data2) );
+		assertEquals(43*100, (int) (ae.avg(data1)*100) );		
+		assertEquals(3*100,  (int) (ae.avg(data2)*100) );
 	}
 	
 	@Test
