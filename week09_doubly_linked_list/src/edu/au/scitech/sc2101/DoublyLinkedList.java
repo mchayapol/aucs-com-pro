@@ -8,6 +8,19 @@ public class DoublyLinkedList {
 		head = last = null;
 	}
 	
+	public int get(int index) {
+		Node cur = head;
+		// find the index
+		for(int i=0; i<index; i++) {
+			// Index out of bound, nothing to delete
+			if (cur == null) 
+				throw new IndexOutOfBoundsException("Index "+index+" is out of bound.");
+			cur = cur.next;
+		}
+		
+		return cur.data;
+	}
+	
 	public void add(int i) {
 		Node n = new Node(i);
 		
@@ -58,8 +71,13 @@ public class DoublyLinkedList {
 			cur = cur.next;
 		}
 		
+		
+		// case 0: last item in the list
+		if (cur == head && cur == last) {
+			head = last = null;
+		} 
 		// case 1: delete at head
-		if (cur == head) {
+		else if (cur == head) {
 			head = head.next;
 			head.prev = null;
 			cur.next = null;
