@@ -109,6 +109,28 @@ public class IntegerLinkedList {
 		}		
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		
+		if(head == null) {
+			sb.append("[ ]");
+		} else {
+			Node cur = head;
+			sb.append("[ ");
+			while( cur != null) {
+				sb.append( cur.value );
+				sb.append(" "); 
+				cur = cur.next;
+			}
+			sb.append("]");
+		}
+		return sb.toString();
+	}
+
+
 	/**
 	 * Determine the size of the list
 	 * @return size in integer
