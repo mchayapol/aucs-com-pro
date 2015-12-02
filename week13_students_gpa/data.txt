@@ -1,0 +1,9 @@
+Chayapol,4115111
+2/2014
+	SC1101,Computer Programming I,4,A
+	BG1001,English I,3,B
+	DA2101,Calculus I,3,A-
+1/2015
+	SC2101,Computer Programming II,4,B
+	BG1002,English II,3,B+
+	DA2102,Principle of Statistics,3,C

@@ -2,6 +2,8 @@ package th.co.transcipt.test;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
+
 import th.co.transcipt.model.*;
 
 import org.junit.Test;
@@ -9,7 +11,28 @@ import org.junit.Test;
 public class GPAtest {
 
 	@Test
-	public void test() {
+	public void readFromFileTest() throws Exception{
+		File dataFile = new File("data.txt");
+		Student student = new Student(dataFile);
+		
+		System.out.println(student);
+		
+		// iterate each semester of a student
+		for(Semester sem : student.getSemesterList()) {
+			System.out.println(sem);
+			
+			// iterate each subject in the semester
+			for(Subject subject : sem.getSubjectList()) {
+				System.out.println("\t"+subject);
+			}
+			System.out.println("\tGPA = "+sem.getGPA());
+		}
+		
+		System.out.println("GPAC = "+student.getGPA());
+	}
+	
+	//@Test
+	public void test1() {
 		Semester sem1 = new Semester(2,2014);
 		Semester sem2 = new Semester(1,2015);
 		
@@ -21,7 +44,7 @@ public class GPAtest {
 		sem2.addSubject(new Subject("BG1002","English II",3,"B+"));
 		sem2.addSubject(new Subject("DA2102","Principle of Statistics",3,"C"));
 		
-		Student student = new Student("Chayapol");
+		Student student = new Student("4115111","Chayapol");
 		
 		student.addSemester(sem1);
 		student.addSemester(sem2);
